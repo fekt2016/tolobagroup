@@ -4,12 +4,10 @@ import Heading from '../../ui/Heading'
 import { devicesMax } from '../../styles/BreakPoint'
 import Button from '../../ui/Button'
 const StyledGroup = styled.div`
+  padding: 6rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-
-  @media ${devicesMax.lg} {
-  }
   @media ${devicesMax.md} {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -33,24 +31,55 @@ const ImgBox = styled.div`
     filter: brightness(60%);
   }
 `
-const ContentBox = styled.div``
-const TextBox = styled.div`
-  padding: 3rem;
+const ContentBox = styled.div`
   background-color: var(--color-white);
+`
+const TextBox = styled.div`
+  padding: 4rem;
+
+  p {
+    hyphens: none;
+    text-align: center;
+  }
+`
+const FirstBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    hyphens: none;
+    text-align: center;
+  }
+
+  @media ${devicesMax.md} {
+    p {
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+    }
+  }
+`
+const HeadingBox = styled.div`
+  width: 100%;
 `
 function Groups() {
   return (
     <Section type="group">
       <StyledGroup>
-        <div>
-          <Heading as="h3">Sectors of Operation</Heading>
+        <FirstBox>
+          <HeadingBox>
+            <Heading as="h4" border="2px solid var(--color-secoundary-900)">
+              Sectors of Operation
+            </Heading>
+          </HeadingBox>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
             repellat ipsam facere itaque qui aspernatur inventore nobis
             voluptatem nisi! Quod maxime quia voluptatem rerum?
           </p>
           <Button>Explore All Sectors</Button>
-        </div>
+        </FirstBox>
         <ContentBox>
           <ImgBox background="../../../tolo4.jpeg"></ImgBox>
           <TextBox>

@@ -1,8 +1,9 @@
 /* eslint react/prop-types: 0 */
+
 import styled from 'styled-components'
-import Background from './background'
+import Background from '../homePage/background'
 import { useEffect, useState } from 'react'
-import TextField from './TextField'
+import TextField from '../homePage/TextField'
 
 const Wrapper = styled.header`
   height: 90vh;

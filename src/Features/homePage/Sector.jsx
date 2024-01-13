@@ -11,12 +11,12 @@ import { MdOutlineMoreTime } from 'react-icons/md'
 import Heading from '../../ui/Heading'
 import Button from '../../ui/Button'
 import { devicesMax } from '../../styles/BreakPoint'
-// import { devicesMax } from '../../styles/BreakPoint'
+import Card from '../../ui/Card'
+
 const StyledSector = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-
   @media ${devicesMax.md} {
     grid-template-columns: 1fr;
   }
@@ -44,16 +44,27 @@ const TextBox = styled.div`
   p {
     padding: 2rem;
     width: 25rem;
+    text-align: center;
   }
 
   &:first-child {
     border-right: 1px solid var(--color-black-900);
+
+    @media ${devicesMax.md} {
+      border-right: none;
+    }
   }
 `
 
 const ContentBox = styled.div`
   display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 4rem;
+
+  @media ${devicesMax.md} {
+    flex-direction: column;
+  }
 `
 
 const RightContainer = styled.div`
@@ -64,80 +75,48 @@ const RightContainer = styled.div`
   gap: 20px;
 
   @media ${devicesMax.md} {
-    grid-template-columns: 100%;
-    grid-template-rows: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
-`
-
-const StyledData = css`
-  background-color: ${(props) => props.bagcolor};
-  border-radius: 10px;
-  padding: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-const StyledSec = styled.div`
-  ${StyledData}
-  grid-row: 1/3;
-
   @media ${devicesMax.sm} {
-    grid-column: none;
-    grid-row: none;
+    padding: 1rem;
   }
 `
-const StyledSub = styled.div`
-  ${StyledData}
-  grid-column: 2/-1;
-  grid-row: 2/4;
 
-  @media ${devicesMax.sm} {
-    grid-column: none;
-    grid-row: none;
-  }
-`
-const StyledAge = styled.div`
-  ${StyledData}
-  grid-column: 2/4;
-  grid-row: 5/7;
-`
-const StyledStaff = styled.div`
-  ${StyledData}
-  grid-column: 1/2;
-  grid-row: 4/6;
-
-  @media ${devicesMax.sm} {
-    grid-column: none;
-    grid-row: none;
-  }
-`
 const sharedIconStyled = css`
   font-size: 8rem;
   margin-bottom: 2rem;
+  color: var(--color-secoundary-900);
 `
 const ChartIcon = styled(AiOutlinePieChart)`
   ${sharedIconStyled}
-  color:var(--color-white);
 `
 
 const FillIcon = styled(BsHousesFill)`
   ${sharedIconStyled}
-  color:var(--color-gold-900);
 `
 const UsersIcon = styled(FaUsers)`
   ${sharedIconStyled}
-  color:var(--color-gold-900);
 `
 const TimeIcon = styled(MdOutlineMoreTime)`
   ${sharedIconStyled}
-  color:var(--color-gold-900);
 `
 const StyledText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
   p {
     margin-bottom: 3rem;
+    text-align: center;
+    hyphens: none;
   }
+`
+
+const P = styled.p`
+  color: var(--color-secoundary-900);
 `
 
 function Sector() {
@@ -161,7 +140,7 @@ function Sector() {
             </TextBox>
           </ContentBox>
           <StyledText>
-            <Heading as="h4">Quality Service Delivery Since 1995</Heading>{' '}
+            <Heading as="h4">Quality Service Delivery Since 1995</Heading>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
               enim nesciunt vero earum voluptatibus perferendis? Officiis,
@@ -171,30 +150,30 @@ function Sector() {
               facere? Sit natus quaerat harum, reprehenderit voluptates iusto
               officia autem voluptate facere ea cupiditate ut, iste impedit.
             </p>
-            <Button>more about the toloba group</Button>
+            <Button>more about the toloba group &rarr;</Button>
           </StyledText>
         </StyledHeader>
         <RightContainer>
-          <StyledSec bagcolor="var(--color-gold-900)">
+          <Card type="sec" bagcolor="var(--color-primary-900)">
             <ChartIcon />
-            <span>14 +</span>
-            <p>sectors</p>
-          </StyledSec>
-          <StyledSub bagcolor="var(--color-gold-200)">
+            <P>14 +</P>
+            <P>sectors</P>
+          </Card>
+          <Card type="sub" bagcolor="var(--color-primary-700)">
             <FillIcon />
-            <spa>60 +</spa>
-            <p>subsidiares</p>
-          </StyledSub>
-          <StyledAge bagcolor="var(--color-gold-200)">
+            <P>60 +</P>
+            <P>subsidiares</P>
+          </Card>
+          <Card type="age" bagcolor="var(--color-primary-700)">
             <TimeIcon />
-            <span>25 +</span>
-            <p>Year of Existence</p>
-          </StyledAge>
-          <StyledStaff bagcolor="var(--color-gold-200)">
+            <P>25 +</P>
+            <P>Year of Existence</P>
+          </Card>
+          <Card type="staff" bagcolor="var(--color-primary-700)">
             <UsersIcon />
-            <span>20 +</span>
-            <p>core Staffs</p>
-          </StyledStaff>
+            <P>20 +</P>
+            <P>core Staffs</P>
+          </Card>
         </RightContainer>
       </StyledSector>
     </Section>

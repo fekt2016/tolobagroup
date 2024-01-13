@@ -6,32 +6,48 @@ import { devicesMax } from '../../styles/BreakPoint'
 
 const TextAbout = styled.div`
   flex: 1;
-  padding: 4rem 6rem;
+  padding: 4rem;
   text-align: center;
-  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   p {
-    margin: 4rem 0rem;
     margin-bottom: 8rem;
+    hyphens: none;
   }
-`
-const TextHeading = styled.div`
-  border: 2px solid var(--color-gold-900);
-  /* padding: 1rem 2rem; */
-  margin-bottom: 2rem;
-`
-const ImageAbout = styled.div`
-  min-height: 428.5px;
-  flex: 1;
-  position: relative;
-  margin: 0 auto;
 
   @media ${devicesMax.md} {
     width: 100%;
+    padding: 2rem;
+  }
+  @media ${devicesMax.sm} {
+    width: 100%;
+    padding: 1rem;
+  }
+`
+const TextHeading = styled.div`
+  border: 2px solid var(--color-primary-900);
+  /* padding: 1rem 4rem; */
+  margin-bottom: 2rem;
+  background-color: var(--color-secoundary-900);
+  box-shadow: var(--shadow-md);
+
+  @media ${devicesMax.md} {
+    padding: 0.5rem 2rem;
+  }
+`
+const ImageAbout = styled.div`
+  flex: 1;
+  position: relative;
+  border-left: 10px solid var(--color-secoundary-900);
+  border-bottom: 10px solid var(--color-secoundary-900);
+  border-radius: 10px;
+
+  @media ${devicesMax.md} {
+    width: 100%;
+    height: 500px;
   }
   @media ${devicesMax.sm} {
     width: 100%;
@@ -59,14 +75,15 @@ const ImgBox = styled.div`
   p {
     opacity: 0;
     visibility: hidden;
-    color: var(--color-gold-900);
+    color: var(--color-secoundary-900);
     transition: all 0.8s ease-in;
+    text-transform: capitalize;
   }
 
   &:hover {
     transform: scale(1.5);
     z-index: 5;
-    border: 3px solid var(--color-gold-600);
+    border: 3px solid var(--color-secoundary-900);
     filter: brightness(100%);
   }
   &:hover p {
@@ -75,17 +92,18 @@ const ImgBox = styled.div`
   }
 
   @media ${devicesMax.md} {
-    height: 150px;
-    width: 150px;
-    top: ${(props) => props.topMd};
-    left: ${(props) => props.leftMd};
-    border: 3px solid var(--color-gold-600);
+
+    /* height: 150px;
+    width: 150px; */
+    /* top: ${(props) => props.topMd};
+    left: ${(props) => props.leftMd}; */
+    border: 3px solid (var(--color-secoundary-900));
   }
   @media ${devicesMax.sm} {
-    height: 150px;
+    /* height: 150px;
     width: 150px;
-    left: ${(props) => props.leftSm};
-    border: 3px solid var(--color-gold-600);
+    left: ${(props) => props.leftSm}; */
+    border: 3px solid var(--color-secoundary-900);
   }
 `
 function AboutUs() {
@@ -93,7 +111,7 @@ function AboutUs() {
     <Section type="about">
       <TextAbout>
         <TextHeading>
-          <Heading as="h3">Toloba group of companies</Heading>
+          <Heading as="h2">Toloba group of companies</Heading>
         </TextHeading>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae
@@ -114,72 +132,74 @@ function AboutUs() {
       <ImageAbout>
         <ImgBox
           skew="20deg"
-          top="-100px"
-          topMd="50px"
-          left="50px"
-          leftMd="200px"
-          leftSm="80px"
+          top="10%"
+          left="5%"
           background="../../../consult.jpeg"
         >
-          <p>toloba sports consults</p>
+          <p>toloba sports consult Limited</p>
           <p>where sports is big</p>
         </ImgBox>
         <ImgBox
           skew="-20deg"
-          top="-100px"
-          topMd="50px"
-          left="250px"
-          leftMd="350px"
-          leftSm="230px"
+          top="10%"
+          left="30%"
           background="../../../energy.jpeg"
         >
-          <p>toloba sports consults</p>
+          <p>Corporate Sport Ghana Limited</p>
           <p>where sports is big</p>
         </ImgBox>
         <ImgBox
           skew="20deg"
-          top="170px"
-          topMd="250px"
-          left="250px"
-          leftMd="350px"
-          leftSm="230px"
+          top="30%"
+          left="10%"
           background="../../../travel.jpeg"
         >
-          <p>toloba sports consults</p>
+          <p>Islamic Center for Guidance Limited</p>
           <p>where sports is big</p>
         </ImgBox>
         <ImgBox
           skew="-20deg"
-          top="170px"
-          topMd="250px"
-          left="50px"
-          leftMd="200px"
-          leftSm="80px"
+          top="30%"
+          left="35%"
           background="../../../unsplash.jpg"
         >
-          <p>toloba sports consults</p>
+          <p>Toloba Recruitment Agency Limited</p>
           <p>where sports is big</p>
         </ImgBox>
         <ImgBox
-          top="50px"
-          topMd="150px"
-          left="0rem"
-          leftMd="100px"
-          leftSm="20px"
+          skew="20deg"
+          top="40%"
+          left="15%"
           background="../../../tolo2.jpeg"
         >
-          <p>toloba sports consults</p>
+          <p>Toloba Energy</p>
           <p>where sports is big</p>
         </ImgBox>
         <ImgBox
-          top="50px"
-          left="300px"
-          leftMd="450px"
-          topMd="150px"
-          leftSm="250px"
-          background="../../../tolo3.jpeg"
+          skew="-15deg"
+          top="40%"
+          left="40%"
+          background="../../../pc8.jpg"
         >
-          <p>toloba sports consults</p>
+          <p>Ghana Private Refeeeres Training</p>
+          <p>where sports is big</p>
+        </ImgBox>
+        <ImgBox
+          skew="20deg"
+          top="50%"
+          left="20%"
+          background="../../../tolo2.jpeg"
+        >
+          <p>Musah Toloba Ventures</p>
+          <p>where sports is big</p>
+        </ImgBox>
+        <ImgBox
+          skew="-20deg"
+          top="50%"
+          left="45%"
+          background="../../../public/tolo97.jpeg"
+        >
+          <p>Eventful Travel & Tour Limited</p>
           <p>where sports is big</p>
         </ImgBox>
       </ImageAbout>

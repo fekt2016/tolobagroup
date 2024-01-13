@@ -3,12 +3,12 @@ import NavList from './NavList'
 import { devicesMax } from '../styles/BreakPoint'
 
 const StyledNav = styled.nav`
-  flex: 2;
   height: 100%;
 ${(props) => props.type === 'mini' && css``}
   @media ${devicesMax.md} {
     display: none;
   }
+
 `
 function Nav() {
   return (

@@ -20,18 +20,16 @@ const NavWrapper = styled.div`
   background-color: transparent;
 
   ${(props) =>
-    props.nav ? 'background-color:var(--color-gold-900)' : 'transparent'};
+    props.nav ? 'background-color:var(--color-secoundary-900)' : ''};
 `
 const Img = styled.img`
   height: 5rem;
 `
-const ImgBox = styled.div`
-  flex: 1;
-`
+const ImgBox = styled.div``
 
 const IconCross = styled(HiOutlineBars3BottomRight)`
   font-size: 3rem;
-  color: var(--color-red);
+  color: var(--color-primary-900);
   display: none;
   @media ${devicesMax.md} {
     display: block;
@@ -39,7 +37,7 @@ const IconCross = styled(HiOutlineBars3BottomRight)`
 `
 const IconMenu = styled(HiMiniXMark)`
   font-size: 3rem;
-  color: var(--color-red);
+  color: var(--color-primary-900);
   display: none;
   @media ${devicesMax.md} {
     display: block;
@@ -54,7 +52,7 @@ const StyledMinNav = styled.nav`
   visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
   height: 30rem;
   transition: all 0.5s;
-  background-color: black;
+  background-color: var(--color-primary-900);
   z-index: 10;
 `
 function Navbar() {

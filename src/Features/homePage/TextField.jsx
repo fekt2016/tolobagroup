@@ -2,25 +2,12 @@
 import styled from 'styled-components'
 import { IoPlay, IoPause, IoArrowForward } from 'react-icons/io5'
 import Heading from '../../ui/Heading'
-// import { devicesMax } from '../../styles/BreakPoint'
 
 const StyledTextContainer = styled.div`
   padding: 4rem;
 `
 const HeadBox = styled.div``
-// const HeadingText = styled.h1`
-//   font-size: 11rem;
-//   color: var(--color-white);
-//   line-height: 13rem;
 
-//   @media ${devicesMax.md} {
-//     font-size: 7rem;
-//   }
-//   @media ${devicesMax.sm} {
-//     font-size: 4rem;
-//     line-height: 8rem;
-//   }
-// `
 const GroupEx = styled.div`
   display: flex;
   align-items: center;
@@ -29,7 +16,7 @@ const GroupEx = styled.div`
   margin-top: 7rem;
   padding: 0.5rem 0.8rem;
   padding-left: 5rem;
-  background-color: var(--color-gold-900);
+  background-color: var(--color-secoundary-900);
   border-radius: 100px;
   cursor: pointer;
 `
@@ -49,10 +36,10 @@ const StyledDotItem = styled.li`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--color-white);
   ${({ count, groupcount }) =>
     count === groupcount
-      ? 'background-color: var(--color-gold-900)'
+      ? 'background-color: var(--color-secoundary-900)'
       : 'background-color: var(--color-white)'}
 `
 const StyledPlay = styled.div`
@@ -62,7 +49,7 @@ const StyledPlay = styled.div`
   align-items: center;
 
   p {
-    color: var(--color-white);
+    color: var(--color-secoundary-900);
     font-size: 2rem;
     text-transform: capitalize;
   }
@@ -81,7 +68,7 @@ const ArrowBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--color-black-900);
+  border: 1px solid var(--color-primary-900);
   border-radius: 50%;
 `
 const StyledControl = styled.div`
@@ -91,7 +78,7 @@ const StyledControl = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--color-red-900);
+  border: 1px solid var(--color-secoundary-900);
   border-radius: 50%;
   transition: all 0.3s ease;
   &:hover {

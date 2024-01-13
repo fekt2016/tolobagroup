@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Heading from '../../ui/Heading'
 import Section from '../../ui/Section'
 import { Link } from 'react-router-dom'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const Header = styled.div`
   margin-bottom: 2rem;
@@ -16,6 +17,11 @@ const ContentBox = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+
+  @media ${devicesMax.md} {
+    flex-direction: column;
+  }
 `
 const ImgBox = styled.div`
   background-image: ${(props) => `url(${props.background})`};

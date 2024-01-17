@@ -48,11 +48,24 @@ const StyledMedia = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media ${devicesMax.sm} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `
 const StyledIconContainer = styled.div``
 const TextBox = styled.div`
   align-self: flex-end;
   color: var(--color-white);
+
+  p {
+    font-size: 1.2rem;
+  }
+  @media ${devicesMax.sm} {
+    align-self: center;
+  }
 `
 
 const StyledIcon = css`

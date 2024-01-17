@@ -6,8 +6,9 @@ const StyledHeader = styled.header`
   height: 70vh;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   padding-left: 10rem;
   color: var(--color-white);
 
@@ -19,10 +20,15 @@ const StyledHeader = styled.header`
 const Img = styled.img`
   height: 400px;
 `
-function Header({ src, name }) {
+const P = styled.p`
+  font-size: 1.6rem;
+  margin: 2rem;
+`
+function Header({ src, name, msg }) {
   return (
-    <StyledHeader src={src} name={name}>
+    <StyledHeader src={src} name={name} msg={msg}>
       <Heading as="h2">{name}</Heading>
+      <P>{msg}</P>
       {name === 'Ghana corporate sports' ? (
         <Img src="../../public/corp.png" />
       ) : (

@@ -29,9 +29,8 @@ const TextAbout = styled.div`
 `
 const TextHeading = styled.div`
   border: 2px solid var(--color-primary-900);
-  /* padding: 1rem 4rem; */
+  padding: 1rem 4rem;
   margin-bottom: 2rem;
-  background-color: var(--color-secoundary-900);
   box-shadow: var(--shadow-md);
 
   @media ${devicesMax.md} {
@@ -41,8 +40,8 @@ const TextHeading = styled.div`
 const ImageAbout = styled.div`
   flex: 1;
   position: relative;
-  border-left: 10px solid var(--color-secoundary-900);
-  border-bottom: 10px solid var(--color-secoundary-900);
+  border-left: 10px solid var(--color-primary-900);
+  border-bottom: 10px solid var(--color-primary-900);
   border-radius: 10px;
 
   @media ${devicesMax.md} {
@@ -83,7 +82,7 @@ const ImgBox = styled.div`
   &:hover {
     transform: scale(1.5);
     z-index: 5;
-    border: 3px solid var(--color-secoundary-900);
+    border: 3px solid var(--color-primary-900);
     filter: brightness(100%);
   }
   &:hover p {
@@ -92,17 +91,9 @@ const ImgBox = styled.div`
   }
 
   @media ${devicesMax.md} {
-
-    /* height: 150px;
-    width: 150px; */
-    /* top: ${(props) => props.topMd};
-    left: ${(props) => props.leftMd}; */
     border: 3px solid (var(--color-secoundary-900));
   }
   @media ${devicesMax.sm} {
-    /* height: 150px;
-    width: 150px;
-    left: ${(props) => props.leftSm}; */
     border: 3px solid var(--color-secoundary-900);
   }
 `
@@ -114,18 +105,12 @@ function AboutUs() {
           <Heading as="h2">Toloba group of companies</Heading>
         </TextHeading>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae
-          maxime praesentium totam repellendus! Quam quaerat placeat veritatis
-          autem! Perspiciatis molestias pariatur, ullam ipsum accusantium neque
-          corrupti cumque asperiores vitae architecto soluta, qui sit tempore
-          tempora non eum iste explicabo at deleniti quia nemo, porro quidem
-          voluptatum cum? Similique, magni. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Tempore quae maxime praesentium totam
-          repellendus! Quam quaerat placeat veritatis autem! Perspiciatis
-          molestias pariatur, ullam ipsum accusantium neque corrupti cumque
-          asperiores vitae architecto soluta, qui sit tempore tempora non eum
-          iste explicabo at deleniti quia nemo, porro quidem voluptatum cum?
-          Similique, magni.
+          Established in the year 2022 and duly registered with the Registrar
+          Generals Department in 2023, Toloba Group of Companies stands as a
+          testament to innovation, commitment, and diversified excellence in
+          various sectors. Under the visionary leadership of Mr. Musah Toloba,
+          the President, and Founder, the group embodies a holistic approach to
+          business, community, and growth.
         </p>
         <Button>More &rarr;</Button>
       </TextAbout>

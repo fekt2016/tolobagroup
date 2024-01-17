@@ -1,18 +1,23 @@
 import styled from 'styled-components'
 import Section from '../../ui/Section'
 import Heading from '../../ui/Heading'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const Container = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-
   padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media ${devicesMax.md} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${devicesMax.sm} {
+    grid-template-columns: 1fr;
+  }
 `
 const Card = styled.div`
-  width: 28rem;
+  /* width: 40rem; */
   padding: 1rem;
   background-color: var(--color-white);
 `
@@ -53,6 +58,17 @@ function Team() {
       </Header>
 
       <Container>
+        <Card>
+          <ImgBox>
+            <Img src="../../../public/pc3.jpg" alt="img" />
+          </ImgBox>
+
+          <TextBox>
+            <Heading as="h5">Dr. Joseph Siaw Agyepong</Heading>
+            <P>CHAIRMAN | FOUNDER</P>
+            <P>&#x201C;Our country is our identity, keep it clean&#x201D;</P>
+          </TextBox>
+        </Card>
         <Card>
           <ImgBox>
             <Img src="../../../public/pc3.jpg" alt="img" />

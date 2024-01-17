@@ -1,23 +1,28 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Section from '../../ui/Section'
 import Heading from '../../ui/Heading'
 import { IoTelescope } from 'react-icons/io5'
 import { FaRocket } from 'react-icons/fa'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const Container = styled.div`
+  padding: 1rem;
   display: flex;
   gap: 20px;
+
+  @media ${devicesMax.md} {
+    flex-direction: column;
+  }
 `
 const ImgContent = styled.div`
   flex: 1;
-  /* padding: 1rem; */
+
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
+  justify-content: space-between;
 `
 const ImgText = styled.div`
-  height: 344px;
-  /* padding: 0rem 2rem; */
+  padding: 0rem 2rem;
 
   display: flex;
   flex-direction: column;
@@ -26,13 +31,16 @@ const ImgText = styled.div`
 
 const TextContent = styled.div`
   flex: 1;
-  /* padding: 1rem; */
 `
 const IconBox = styled.div`
-  height: 344px;
+  padding: 2rem;
 
   display: flex;
   gap: 20px;
+
+  @media ${devicesMax.sm} {
+    flex-direction: column;
+  }
 `
 const P = styled.p`
   color: var(--color-red-900);
@@ -40,31 +48,44 @@ const P = styled.p`
 `
 const ImgBox = styled.div`
   height: 344px;
+  /* flex: 1; */
 `
 const Img = styled.img`
   height: 100%;
   width: 100%;
 `
 const TextContainer = styled.div`
-  height: 344px;
+  /* height: 344px; */
   padding: 3rem;
 
-  /* p {
+  p {
     hyphens: none;
-    color: red;
-  } */
+  }
 `
 
 const Card = styled.div`
-  background-color: seagreen;
   height: 100%;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-secoundary-100);
+  box-shadow: var(--shadow-md);
+`
+const StyledIcon = css`
+  font-size: 5rem;
+  color: var(--color-primary-900);
+  margin-bottom: 2rem;
+`
+const IconScope = styled(IoTelescope)`
+  ${StyledIcon}
+`
+const IconRock = styled(FaRocket)`
+  ${StyledIcon}
 `
 function About() {
   return (
@@ -107,7 +128,7 @@ function About() {
           </TextContainer>
           <IconBox>
             <Card>
-              <IoTelescope />
+              <IconScope />
               <Heading as="h5">Vision</Heading>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
@@ -116,7 +137,7 @@ function About() {
               </p>
             </Card>
             <Card>
-              <FaRocket />
+              <IconRock />
               <Heading as="h5">Mission</Heading>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum

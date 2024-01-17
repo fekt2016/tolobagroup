@@ -22,7 +22,7 @@ const Heading = styled.h1`
   ${(props) =>
     props.as === 'h2' &&
     css`
-      font-size: 4rem;
+      font-size: 5rem;
       text-transform: capitalize;
       line-height: 4rem;
 
@@ -44,7 +44,7 @@ const Heading = styled.h1`
   ${(props) =>
     props.as === 'h4' &&
     css`
-      font-size: 3rem;
+      font-size: 2rem;
       text-transform: capitalize;
       text-align: center;
       border: ${(props) => props.border};
@@ -54,6 +54,7 @@ const Heading = styled.h1`
        css`
          font-size: 1.8rem;
          text-transform: capitalize;
+         text-align: center;
        `}
 `
 

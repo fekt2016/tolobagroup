@@ -140,15 +140,15 @@ function Sector() {
             </TextBox>
           </ContentBox>
           <StyledText>
-            <Heading as="h4">Quality Service Delivery Since 1995</Heading>
+            <Heading as="h4">Quality Service Delivery Since 2022</Heading>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              enim nesciunt vero earum voluptatibus perferendis? Officiis,
-              numquam inventore impedit asperiores animi consequatur iste sunt
-              perferendis temporibus, delectus id minus quia totam non molestiae
-              fuga deserunt eius ex dicta iure veritatis eligendi ea recusandae
-              facere? Sit natus quaerat harum, reprehenderit voluptates iusto
-              officia autem voluptate facere ea cupiditate ut, iste impedit.
+              Unified by a vision of excellence, social responsibility, and
+              sustainable growth, Toloba Group of Companies continues to be a
+              catalyst for positive change, making a meaningful impact on both
+              the business landscape and the communities it serves. With a
+              commitment to integrity, innovation, and inclusivity, the group
+              envisions a future where its diverse entities collectively
+              contribute to a thriving and harmonious society.
             </p>
             <Button>more about the toloba group &rarr;</Button>
           </StyledText>

@@ -68,6 +68,20 @@ const Section = styled.section`
         padding: 2rem;
       `}
       ${(props) => props.type === 'location' && css``}
+      ${(props) =>
+        props.type === 'blog' &&
+        css`
+          padding: 3rem;
+
+          @media ${devicesMax.md} {
+            padding: 1rem;
+          }
+        `}
+        ${(props) =>
+          props.type === 'service' &&
+          css`
+            padding: 4rem;
+          `}
 
 `
 

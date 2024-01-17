@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Button = styled.button`
   border: none;
@@ -8,6 +8,13 @@ const Button = styled.button`
   box-shadow: var(--shadow-sm);
   font-size: 1.6rem;
   transition: all 0.3s;
+
+  ${(props) =>
+    props.type === 'service' &&
+    css`
+      margin-bottom: 4rem;
+      border-radius: 100px;
+    `}
 
   &:hover {
     transform: translateX(5px);

@@ -4,6 +4,7 @@ import { devicesMax } from './BreakPoint';
 const GlobalStyles = createGlobalStyle`:root {
   --color-primary-900: #2c3343;
   --color-primary-700: #4e5a76;
+  --color-primary-100: #627195;
 
   --color-secoundary-900:#e9233e;
   --color-secoundary-800:#ec4259;

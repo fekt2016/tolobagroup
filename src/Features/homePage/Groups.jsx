@@ -36,21 +36,14 @@ const ContentBox = styled.div`
 `
 const TextBox = styled.div`
   padding: 4rem;
-
-  p {
-    hyphens: none;
-    text-align: center;
-  }
 `
 const FirstBox = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   p {
-    hyphens: none;
-    text-align: center;
   }
 
   @media ${devicesMax.md} {
@@ -59,6 +52,10 @@ const FirstBox = styled.div`
       margin-bottom: 8rem;
     }
   }
+`
+const P = styled.p`
+  text-align: start;
+  hyphens: none;
 `
 const HeadingBox = styled.div`
   width: 100%;
@@ -73,99 +70,104 @@ function Groups() {
               Sectors of Operation
             </Heading>
           </HeadingBox>
-          <p>
+          <P>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
             repellat ipsam facere itaque qui aspernatur inventore nobis
             voluptatem nisi! Quod maxime quia voluptatem rerum?
-          </p>
+          </P>
           <Button>Explore All Sectors</Button>
         </FirstBox>
         <ContentBox>
           <ImgBox background="../../../tolo4.jpeg"></ImgBox>
           <TextBox>
             <Heading as="h4">Islamic Center for Guidance </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <P>
+              Serving as the charity arm of Toloba Group, the Islamic Center for
+              Guidance goes beyond religious perspectives to provide
+              humanitarian aid, community development, and support to those in
+              need. Committed to fostering a culture of care and compassion, it
+              actively engages in philanthropic initiatives for the betterment
+              of society.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../tolo3.jpeg"></ImgBox>
           <TextBox>
-            <Heading as="h4">toloba sport consult </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">Corporate Sport Ghana Limited </Heading>
+            <P>
+              A flagship subsidiary specializing in corporate sports management
+              and events, fostering a healthy blend of competition and
+              camaraderie within the corporate landscape.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../tolo2.jpeg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4"> ⁠Toloba Sports Consult Limited </Heading>
+            <P>
+              A pioneering force in sports consultancy, Toloba Sports Consult is
+              dedicated to unearthing and nurturing talents, particularly in
+              remote areas, contributing significantly to grassroots sports
+              development.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../consult.jpeg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">Toloba Recruitment Agency Limited </Heading>
+            <P>
+              Committed to bridging the gap between talent and opportunity,
+              Toloba Recruitment Agency is a premier recruitment firm offering
+              strategic staffing solutions across diverse industries.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../pc3.jpg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">⁠Toloba Energy Limited </Heading>
+            <P>
+              A forward-thinking entity dedicated to sustainable energy
+              solutions, Toloba Energy Limited is at the forefront of driving
+              innovation and eco-friendly practices in the energy sector.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../pc7.jpg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">Ghana Private Referees Training Limited </Heading>
+            <P>
+              Setting the standard for referee training, this subsidiary is
+              instrumental in enhancing the skills and professionalism of
+              referees in Ghana&apos;s sporting arena.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../pc8.jpg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">Mtolo Ventures </Heading>
+            <P>
+              As a versatile venture within the Toloba Group, Mtolo Ventures
+              explores diverse business opportunities, adapting to emerging
+              markets and contributing to the economic landscape.
+            </P>
           </TextBox>
         </ContentBox>
         <ContentBox>
           <ImgBox background="../../../pc6.jpg"></ImgBox>
           <TextBox>
-            <Heading as="h4">energy and oil </Heading>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur magni alias id iste, illo vitae, obcaecati, tempore
-              quisquam delectus dolores dignissimos totam in laboriosam.
-            </p>
+            <Heading as="h4">Eventful Travel and Ticketing Limited </Heading>
+            <P>
+              A strategic subsidiary focusing on travel and ticketing services,
+              Eventful Travel and Ticketing Limited offers seamless solutions
+              for a variety of travel needs, providing clients with unparalleled
+              experiences and convenience.
+            </P>
           </TextBox>
         </ContentBox>
       </StyledGroup>

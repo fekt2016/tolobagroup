@@ -2,9 +2,11 @@
 import styled from 'styled-components'
 import { IoPlay, IoPause, IoArrowForward } from 'react-icons/io5'
 import Heading from '../../ui/Heading'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const StyledTextContainer = styled.div`
   padding: 4rem;
+  /* background-color: aliceblue; */
 `
 const HeadBox = styled.div``
 
@@ -19,6 +21,13 @@ const GroupEx = styled.div`
   background-color: var(--color-secoundary-900);
   border-radius: 100px;
   cursor: pointer;
+
+  @media ${devicesMax.md} {
+    margin-top: 2rem;
+  }
+  @media ${devicesMax.sm} {
+    margin-top: 7rem;
+  }
 `
 
 const StyledDotPlay = styled.div`
@@ -102,7 +111,7 @@ function TextField({
     <StyledTextContainer>
       <HeadBox>
         <Heading as="h1">{groupData.text1}</Heading>
-        <Heading as="h1">{groupData.text2}</Heading>
+        <Heading as="h2">{groupData.text2}</Heading>
       </HeadBox>
       <GroupEx>
         <p>Explore the feature</p>
@@ -134,14 +143,12 @@ function TextField({
             {!playStatus ? (
               <IconPlay
                 onClick={() => {
-                  console.log('testing')
                   setPlayStatus(true)
                 }}
               />
             ) : (
               <IconPause
                 onClick={() => {
-                  console.log('testing')
                   setPlayStatus(false)
                 }}
               />

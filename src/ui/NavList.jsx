@@ -166,7 +166,7 @@ function NavList({ type }) {
               islamic center for guidance ltd
             </DropLink>
             <DropLink to="recruitment">toloba recruitment agency ltd</DropLink>
-            <DropLink to="energy">toloba energy ltd</DropLink>
+            <DropLink to="toloba-energy">toloba energy ltd</DropLink>
             <DropLink to="referees">ghana private refeeres training</DropLink>
             <DropLink to="sport-consult">Mtolo ventures</DropLink>
             <DropLink to="travel-tour">eventful travel & tour ltd</DropLink>

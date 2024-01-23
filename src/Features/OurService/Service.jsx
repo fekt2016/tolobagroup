@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Section from '../../ui/Section'
 import Heading from '../../ui/Heading'
 import { Link } from 'react-router-dom'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const Container = styled.div`
   padding: 8rem;
@@ -9,6 +10,10 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 150px;
+
+  @media ${devicesMax.md} {
+    grid-template-columns: 1fr;
+  }
 `
 const StyledLink = styled(Link)`
   background-color: var(--color-white);

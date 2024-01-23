@@ -7,6 +7,7 @@ import Button from '../../ui/Button'
 
 const StyledFooter = styled.footer`
   background-color: var(--color-primary-900);
+  padding: 2rem;
 `
 
 const ContentBox = styled.div`
@@ -27,8 +28,16 @@ const List = styled.div`
   font-size: 1.6rem;
   text-transform: capitalize;
 
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
   ul {
     color: var(--color-white);
+
+    li {
+      margin-bottom: 1rem;
+    }
   }
 
   ${(props) =>
@@ -121,13 +130,18 @@ const Input = styled.input`
   width: 100%;
   padding: 1rem;
 `
-
+const Header = styled.div`
+  font-size: 2.5rem !important;
+  margin-bottom: 2rem;
+`
 function Footer() {
   return (
     <StyledFooter>
       <ContentBox>
         <List>
-          <Heading as="h5">Quick Links</Heading>
+          <Header>
+            <Heading as="h5">Quick Links</Heading>
+          </Header>
           <ul>
             <li>
               <Link to="/">home</Link>
@@ -147,7 +161,9 @@ function Footer() {
           </ul>
         </List>
         <List>
-          <Heading as="h5">Location</Heading>
+          <Header>
+            <Heading as="h5">Location</Heading>
+          </Header>
           <ul>
             <li>Ablempeke Opposite Marwako fast Food. Ablempeke, Accra</li>
 
@@ -156,7 +172,9 @@ function Footer() {
           </ul>
         </List>
         <List>
-          <Heading as="h5">Groups</Heading>
+          <Header>
+            <Heading as="h5">Groups</Heading>
+          </Header>
           <ul>
             <li>toloba Sport Consult Ltd</li>
             <li>Corporate Sport Ghana Ltd</li>
@@ -170,7 +188,9 @@ function Footer() {
         </List>
 
         <List type="news">
-          <Heading as="h5">NewsLetter</Heading>
+          <Header>
+            <Heading as="h5">NewsLetter</Heading>
+          </Header>
           <p>
             Sign up our newsletter to get update news and article about company.
           </p>

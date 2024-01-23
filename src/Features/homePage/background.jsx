@@ -1,6 +1,7 @@
 /* eslint react/prop-types: 0 */
 
 import styled, { keyframes } from 'styled-components'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const fadeIn = keyframes`
 from {opacity: 0}
@@ -14,6 +15,9 @@ const StyledBackground = styled.div`
   top: 0;
   z-index: -1;
   animation: ${fadeIn} 500ms ease-in-out;
+  @media ${devicesMax.md} {
+    height: 70vh;
+  }
 `
 const Img = styled.img`
   width: 100%;
@@ -34,7 +38,7 @@ function Background({ playStatus, groupCount }) {
   } else if (groupCount === 0) {
     return (
       <StyledBackground>
-        <Img src="../../../unsplash.jpg" alt="background" />
+        <Img src="../../../tolo555.jpeg" alt="background" />
       </StyledBackground>
     )
   } else if (groupCount === 1) {

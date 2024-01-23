@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import GlobalStyles from './styles/GlobalStyles'
-import AppLayout from './ui/AppLayout'
+import AppLayout from './pages/AppLayout'
 import HomePage from './pages/HomePage'
 import Contact from './pages/Contact'
-import AboutUs from './pages/AboutUs'
+import AboutUsPage from './pages/AboutUsPage'
 import Services from './pages/Services'
 import Blog from './pages/Blog'
 import NewsPage from './pages/NewsPage'
@@ -15,6 +15,7 @@ import Ngo from './pages/Ngo'
 import Recruitment from './pages/Recruitment'
 import Referee from './pages/Referee'
 import Mtolo from './pages/Mtolo'
+import BlogNews from './Features/Blog/BlogNews'
 
 function App() {
   return (
@@ -25,10 +26,12 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<HomePage />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="aboutus" element={<AboutUs />} />
+            <Route path="aboutus" element={<AboutUsPage />} />
             <Route path="service" element={<Services />} />
-            <Route path="blog-news" element={<Blog />} />
-            <Route path="blog-news/newspage" element={<NewsPage />} />
+            <Route path="blog-news" element={<Blog />}>
+              <Route index element={<BlogNews />} />
+              <Route path="/blog-news/newspage/:id" element={<NewsPage />} />
+            </Route>
             <Route path="sport-consult" element={<Consult />} />
             <Route path="toloba-energy" element={<Energy />} />
             <Route path="corperate-sport" element={<Corperate />} />

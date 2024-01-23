@@ -4,10 +4,15 @@ import styled from 'styled-components'
 import Background from '../homePage/background'
 import { useEffect, useState } from 'react'
 import TextField from '../homePage/TextField'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const Wrapper = styled.header`
   height: 90vh;
   width: 100vw;
+
+  @media ${devicesMax.md} {
+    height: 70vh;
+  }
 `
 
 function Header() {

@@ -3,6 +3,7 @@ import { devicesMax } from '../styles/BreakPoint'
 
 const Section = styled.section`
 /* margin-top: 4rem; */
+/* width: 100vw; */
   ${(props) =>
     props.type === 'about' &&
     css`
@@ -30,6 +31,7 @@ const Section = styled.section`
     props.type === 'group' &&
     css`
       background-color: var(--color-grey-100);
+      padding: 0 2rem;
     `}
   ${(props) =>
     props.type === 'company' &&
@@ -41,6 +43,7 @@ const Section = styled.section`
       align-items: center;
       margin: 0;
       width: 100vw;
+      padding: 0 2rem;
     `}
   ${(props) =>
     props.type === 'choose' &&
@@ -67,7 +70,11 @@ const Section = styled.section`
         background-color: var(--color-grey-100);
         padding: 2rem;
       `}
-      ${(props) => props.type === 'location' && css``}
+      ${(props) =>
+        props.type === 'location' &&
+        css`
+          padding: 0 2rem;
+        `}
       ${(props) =>
         props.type === 'blog' &&
         css`
@@ -82,6 +89,7 @@ const Section = styled.section`
           css`
             padding: 4rem;
           `}
+          ${(props) => props.type === 'newspage' && css``}
 
 `
 

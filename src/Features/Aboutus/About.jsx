@@ -22,11 +22,12 @@ const ImgContent = styled.div`
   justify-content: space-between;
 `
 const ImgText = styled.div`
-  padding: 0rem 2rem;
+  padding: 4rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 `
 
 const TextContent = styled.div`
@@ -89,18 +90,18 @@ const IconRock = styled(FaRocket)`
 `
 function About() {
   return (
-    <Section>
+    <Section type="about">
       <Container>
         <ImgContent>
           <ImgText>
-            <P>Who we are </P>
+            <P>-Who we are </P>
             <Heading as="h2">
               the toloba <br />
               group of companies
             </Heading>
           </ImgText>
           <ImgBox>
-            <Img src="../../../public/energy.jpeg" alt="" />
+            <Img src="../../../energy.jpeg" alt="" />
           </ImgBox>
         </ImgContent>
         <TextContent>

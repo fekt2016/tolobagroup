@@ -5,7 +5,7 @@ import { HiMiniXMark, HiOutlineBars3BottomRight } from 'react-icons/hi2'
 import NavList from '../../ui/NavList.jsx'
 import Nav from '../../ui/Nav.jsx'
 
-const NavWrapper = styled.div`
+const NavWrapper = styled.nav`
   height: 7rem;
   width: 100vw;
   position: sticky;

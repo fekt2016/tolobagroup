@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`:root {
   --color-gold-200:#fffcee;
 
 
-  --color--one:#9293a4;
+
 
   --color-grey-50: #f9fafb;
   --color-grey-100: #f3f4f6;
@@ -85,12 +85,14 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--color-primary-900);
+  /* color: var(--color-primary-900); */
 
   transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
+  width: 100vw;
+
 }
 
 input,
@@ -112,8 +114,8 @@ button {
 
 select:disabled,
 input:disabled {
-  background-color: var(--color-grey-200);
-  color: var(--color-grey-500); }
+  /* background-color: var(--color-grey-200);
+  color: var(--color-grey-500); */ }
 
 input:focus,
 button:focus,
@@ -152,7 +154,7 @@ img {
   max-width: 100%;
 
   /* For dark mode */
-  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+  /* filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity)); */
 }
 `;
 

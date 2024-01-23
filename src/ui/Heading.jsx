@@ -24,7 +24,7 @@ const Heading = styled.h1`
     css`
       font-size: 5rem;
       text-transform: capitalize;
-      line-height: 4rem;
+      line-height: 6rem;
 
       @media ${devicesMax.md} {
         font-size: 2.5rem;

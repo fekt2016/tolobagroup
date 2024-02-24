@@ -16,25 +16,21 @@ const spin = keyframes`
 const StyledList = styled.ul`
   width: 100%;
   height: 100%;
+  padding: 2rem;
 
   display: flex;
   justify-content: space-between;
-
-  padding: 2rem;
+  align-items: center;
 
   color: ${(props) =>
     props.type === 'mini'
       ? 'var(--color-secoundary-900)'
       : 'var(--color-primary-900)'};
 
-  align-items: center;
-
   ${(props) =>
     props.type === 'mini' &&
     css`
       flex-direction: column;
-      width: 100%;
-      height: 100%;
     `}
 `
 

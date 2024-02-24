@@ -3,6 +3,7 @@ import Section from '../../ui/Section'
 import Heading from '../../ui/Heading'
 import { devicesMax } from '../../styles/BreakPoint'
 import Button from '../../ui/Button'
+
 const StyledGroup = styled.div`
   padding: 6rem;
   display: grid;
@@ -10,9 +11,11 @@ const StyledGroup = styled.div`
   gap: 20px;
   @media ${devicesMax.md} {
     grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
   }
   @media ${devicesMax.sm} {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 `
 
@@ -33,6 +36,10 @@ const ImgBox = styled.div`
 `
 const ContentBox = styled.div`
   background-color: var(--color-white);
+
+  @media ${devicesMax.sm} {
+    width: 100%;
+  }
 `
 const TextBox = styled.div`
   padding: 4rem;

@@ -2,8 +2,6 @@ import styled, { css } from 'styled-components'
 import { devicesMax } from '../styles/BreakPoint'
 
 const Section = styled.section`
-/* margin-top: 4rem; */
-/* width: 100vw; */
   ${(props) =>
     props.type === 'about' &&
     css`
@@ -32,6 +30,10 @@ const Section = styled.section`
     css`
       background-color: var(--color-grey-100);
       padding: 0 2rem;
+
+      @media ${devicesMax.md} {
+        padding: 0 1rem;
+      }
     `}
   ${(props) =>
     props.type === 'company' &&
@@ -50,11 +52,17 @@ const Section = styled.section`
     css`
       background-color: var(--color-grey-100);
       padding: 4rem;
+      @media ${devicesMax.md} {
+        padding: 2rem;
+      }
     `}
   ${(props) =>
     props.type === 'news' &&
     css`
       padding: 2rem;
+      @media ${devicesMax.sm} {
+        padding: 1;
+      }
     `}
   ${(props) =>
     props.type === 'optimists' &&
@@ -88,6 +96,9 @@ const Section = styled.section`
           props.type === 'service' &&
           css`
             padding: 4rem;
+            @media ${devicesMax.sm} {
+              padding: 1rem;
+            }
           `}
           ${(props) => props.type === 'newspage' && css``}
 

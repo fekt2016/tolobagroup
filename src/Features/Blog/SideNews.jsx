@@ -9,7 +9,7 @@ const StyledSide = styled.aside`
   background-color: var(--color-primary-900);
   padding: 0.5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   gap: 10px;
@@ -20,8 +20,7 @@ const StyledSide = styled.aside`
 
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 3rem;
-    gap: 10px;
+    justify-content: center;
   }
 `
 
@@ -34,7 +33,7 @@ const Card = styled(Link)`
   display: flex;
 
   @media ${devicesMax.md} {
-    width: 22rem;
+    width: 24rem;
   }
 `
 const ImgBox = styled.div`
@@ -45,11 +44,8 @@ const ImgBox = styled.div`
   }
 `
 const Img = styled.img`
-width: 100%;
-height: 100%;
-
-  /* @media ${devicesMax.md} {
-    /* width: 50%; */
+  width: 100%;
+  height: 100%;
 `
 
 const TextBox = styled.div`
@@ -61,7 +57,6 @@ const TextBox = styled.div`
 
   p {
     @media ${devicesMax.md} {
-      /* font-size: 1rem; */
     }
   }
   @media ${devicesMax.md} {

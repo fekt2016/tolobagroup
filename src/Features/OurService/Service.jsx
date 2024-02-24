@@ -13,6 +13,11 @@ const Container = styled.div`
 
   @media ${devicesMax.md} {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media ${devicesMax.md} {
+    grid-template-columns: 1fr;
+    padding: 2rem;
   }
 `
 const StyledLink = styled(Link)`

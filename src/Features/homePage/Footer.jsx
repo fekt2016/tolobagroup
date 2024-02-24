@@ -208,7 +208,7 @@ function Footer() {
           <Youtube />
         </StyledIconContainer>
         <TextBox>
-          <p>Copyright © 2023. All rights reserved.</p>
+          <Link to="/login">Copyright © 2023. All rights reserved.</Link>
         </TextBox>
       </StyledMedia>
     </StyledFooter>

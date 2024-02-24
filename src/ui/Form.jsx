@@ -11,6 +11,13 @@ const Form = styled.form`
   ${(props) =>
     props.type === 'regular' &&
     css`
+      width: 70%;
+      padding: 2.4rem 4rem;
+    `}
+
+  ${(props) =>
+    props.type === 'login' &&
+    css`
       padding: 2.4rem 4rem;
     `}
 `

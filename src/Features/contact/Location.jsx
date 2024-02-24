@@ -17,7 +17,7 @@ function Location() {
       lat: 5.5834998,
       lng: -0.1999431,
     },
-    zoom: 11,
+    zoom: 10,
   }
   return (
     <Section type="location">
